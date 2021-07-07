@@ -86,6 +86,15 @@ public class Supermercado {
 
 	public void agregarAlCarrito(Integer numeroDeVenta, Integer codigoDeProducto) throws ProductoSinStock, ProductoInexistente {
 		// Incorpora al carrito de compras de la venta identificada por el "numeroDeVenta", el producto identificado por el "codigoDeProducto"
+		Venta venta = getVenta(numeroDeVenta);
+		Producto aRegistrar = getProductoPorCodigo(codigoDeProducto);
+		
+		if(productoExiste(codigoDeProducto)!=true)
+			throw new ProductoInexistente();
+		if(getStock(codigoDeProducto)==0)
+			throw new ProductoSinStock();
+	
+		
 	}
 	
 

@@ -4,6 +4,7 @@ public class Venta {
 
 	private Integer dniDelComprador;
 	private String nombreDelComprador;
+	private Integer importe;
 	
 	public Venta(Integer dniDelComprador, String nombreDelComprador) {
 		this.setDniDelComprador(dniDelComprador);
@@ -24,6 +25,10 @@ public class Venta {
 
 	public void setNombreDelComprador(String nombreDelComprador) {
 		this.nombreDelComprador = nombreDelComprador;
+	}
+
+	public Integer getImporte() {
+		return importe;
 	}
 
 }
